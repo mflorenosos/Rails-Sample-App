@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Rails 5 App
+    %title= set_site_title(yield :title)
     = csrf_meta_tags 
 
     = stylesheet_link_tag    'application', media: 'all'
