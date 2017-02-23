@@ -1,0 +1,10 @@
+- if flash.any?
+  .flash-messages
+    - flash.each do |type, messages|
+      - case type
+      - when 'error'
+        %ul.flash-message.flash-error
+          - messages.each do |field, message|
+            %li= "#{field.to_s.capitalize.gsub('_', ' ')} #{message}"
+      - else
+        %p.flash-message{ class: "flash-#{type.gsub('_', '-')}"}= messages.html_safe

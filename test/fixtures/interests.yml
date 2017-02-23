@@ -1,0 +1,8 @@
+swim:
+  name: 'Swim'
+
+bike:
+  name: 'Bike'
+
+run:
+  name: 'Run'

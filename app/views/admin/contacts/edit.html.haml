@@ -1,0 +1,7 @@
+%h1 Edit Contact
+
+= render 'shared/flash_messages'
+
+= render 'form', contact: contact, form_url: admin_contact_url(contact), method: :patch
+
+- content_for :title, 'Edit Contact'

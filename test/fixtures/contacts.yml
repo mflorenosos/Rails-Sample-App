@@ -1,0 +1,9 @@
+madz:
+  email: 'mflorenosos@example.com'
+  full_name: 'Madz Florenosos'
+  gender: 'f'
+
+jayson:
+  email: 'jmahistrado@example.com'
+  full_name: 'Jayson Mahistrado'
+  gender: 'm'

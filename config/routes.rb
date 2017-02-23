@@ -6,5 +6,9 @@ Rails.application.routes.draw do
 		get 'about-this-app/greetings/:greet_me', to: 'greetings#greet_me', as:'greet_me'
 	end
 
+	namespace :admin do
+		resources :contacts
+	end
+
    root 'static_pages#home'
 end

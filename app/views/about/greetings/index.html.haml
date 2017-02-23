@@ -1,6 +1,10 @@
 %h1 Greetings
 
-%ul 
-  %li= link_to 'Morning', about_greet_me_url(greet_me: 'morning')
-  %li= link_to 'Afternoon', about_greet_me_url(greet_me: 'afternoon')
-  %li= link_to 'Evening', about_greet_me_url(greet_me: 'evening')
+%ul.js-greetings-list
+  %li= link_to 'Morning', about_greet_me_url(greet_me: 'morning'), onclick: 'return false;', data: { remote: true }
+  %li= link_to 'Afternoon', about_greet_me_url(greet_me: 'afternoon'), onclick: 'return false;', data: { remote: true }
+  %li= link_to 'Evening', about_greet_me_url(greet_me: 'evening'), onclick: 'return false;', data: { remote: true }
+
+.js-greeting
+
+- content_for :title, 'About | Greetings'
