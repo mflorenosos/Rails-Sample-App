@@ -1,4 +1,5 @@
-%h1 Greet Me
-%p= "Good #{greet_me}"
+%h1= page_title
 
--content_for :title, "About | Greetings | Good #{greet_me}!"
+%p= display_greetings(greet_me, status)
+
+- content_for :title, site_title

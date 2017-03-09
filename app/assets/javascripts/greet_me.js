@@ -11,6 +11,7 @@ SampleRailsApp.GreetMe.Vars = {
 SampleRailsApp.GreetMe.Utils = {
   showGreetingsList: function() {
     var vars = SampleRailsApp.GreetMe.Vars;
+    alert('showGreetingsList');
 
     $(vars.greetingsList).removeClass('hidden');
     $(vars.greetingWrapper).html('');
@@ -18,6 +19,7 @@ SampleRailsApp.GreetMe.Utils = {
 
   displayGreeting: function(greeting) {
     var vars = SampleRailsApp.GreetMe.Vars;
+    alert('here');
 
     $(vars.greetingsList).addClass('hidden');
     $(vars.greetingWrapper).html('<p>' + greeting + vars.greetingsLink + '</p>');
