@@ -1,9 +1,14 @@
-madz:
-  email: 'mflorenosos@example.com'
-  full_name: 'Madz Florenosos'
+craig:
+  email: 'calexander@example.com'
+  full_name: 'Craig Alexander'
+  gender: 'm'
+
+mirinda:
+  email: 'mcarfrae@example.com'
+  full_name: 'Mirinda Carfrae'
   gender: 'f'
 
-jayson:
-  email: 'jmahistrado@example.com'
-  full_name: 'Jayson Mahistrado'
-  gender: 'm'
+daniela:
+  email: 'dryf@example.com'
+  full_name: 'Daniela Ryf'
+  gender: 'f'

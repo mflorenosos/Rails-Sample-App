@@ -1,13 +1,12 @@
-madz = Contact.create(email: 'mflorenosos@example.com', full_name: 'Madz Florenosos')
-jayson = Contact.create(email: 'jmahistrado@example.com', full_name: 'Jayson Mahistrado')
+craig = Contact.find_or_create_by(email: 'calexander@example.com', full_name: 'Craig Alexander')
+mirinda = Contact.find_or_create_by(email: 'mcarfrae@example.com', full_name: 'Mirinda Carfrae')
 
-madz.update_attributes(gender:'f')
-jayson.update_attributes(gender:'m')
+craig.update_attributes(gender: 'm')
+mirinda.update_attributes(gender: 'f')
 
+swim = Interest.find_or_create_by(name: 'Swim')
 bike = Interest.find_or_create_by(name: 'Bike')
 run = Interest.find_or_create_by(name: 'Run')
-swim = Interest.find_or_create_by(name: 'Swim')
 
-madz.interests << [run,bike,swim]
-
-jayson.interests << [run,bike,swim]
+craig.interests << [swim, bike, run]
+mirinda.interests << [swim, bike, run]

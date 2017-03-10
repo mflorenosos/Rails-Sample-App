@@ -1,9 +1,14 @@
-= form_for contact, url: admin_contacts_url do |f|
+= form_for contact, url: form_url, method: method do |f|
   %p
-    =f.label :full_name, 'Full name'
+    = f.label :full_name, 'Full Name: '
     = f.text_field :full_name, value: contact[:full_name], placeholder: 'Your Full Name', class: ('error' if contact.errors[:full_name]), required: true
   %p
-    =f.label :email, 'Email'
+    = f.label :email, 'Email: '
     = f.email_field :email, value: contact[:email], placeholder: 'Your Email Address', class: ('error' if contact.errors[:email]), required: true
   %p
-    =f.submit 'Submit'
+    = f.submit 'Submit'
+
+    - if contact.id.present?
+      = link_to admin_contact_url(contact.id), method: :delete, data: { confirm: "Delete #{contact.full_name}?" } do
+        = button_tag(type: 'button') do
+          Delete

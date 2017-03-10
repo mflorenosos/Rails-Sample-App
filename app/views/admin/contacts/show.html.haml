@@ -1,15 +1,5 @@
-%h1 Contact Information
+%h1 Contact (for admin use only)
 
-= render 'shared/flash_messages'
+= render 'show', contact: contact
 
-%p
-  %label Full name: 
-  %b
-    =contact[:full_name]
-%p
-  %label Email: 
-  %b
-    =contact[:email]
-%p  
-  = link_to 'Edit', edit_admin_contact_url(contact.id)
-  = link_to 'Delete', admin_contact_url(contact.id), data: { method: :delete, confirm: 'Delete this contact?' }
+- content_for :title, "Contact: #{contact.full_name}"

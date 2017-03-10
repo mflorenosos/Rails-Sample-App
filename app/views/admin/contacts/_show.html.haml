@@ -1,0 +1,17 @@
+.js-view-contact
+  = render 'back_to_contacts'
+
+  %p
+    %strong Full name:
+    = contact.full_name
+  %p
+    %strong Email:
+    = contact.email
+
+  %p
+    = link_to edit_admin_contact_url(contact.id) do
+      = button_tag(type: 'button') do
+        Edit
+    = link_to admin_contact_url(contact.id), method: :delete, data: { confirm: "Delete #{contact.full_name}?" } do
+      = button_tag(type: 'button') do
+        Delete

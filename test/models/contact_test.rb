@@ -2,12 +2,12 @@ require 'test_helper'
 
 class ContactTest < ActiveSupport::TestCase
   setup do
-    @madz = contacts(:madz)
+    @craig = contacts(:craig)
     swim = interests(:swim)
     bike = interests(:bike)
     run = interests(:run)
 
-    @madz.interests << [swim,bike,run]
+    @craig.interests << [swim, bike, run]
   end
 
   test '.males' do
@@ -15,18 +15,18 @@ class ContactTest < ActiveSupport::TestCase
   end
 
   test '.females' do
-    assert_equal 1, Contact.females.count
+    assert_equal 2, Contact.females.count
   end
 
   test '.interests association table' do
-    assert_equal @madz.interests.map{ |i| i.name }.sort, ['Bike', 'Run', 'Swim']
+    assert_equal @craig.interests.map{ |i| i.name }, ['Swim', 'Bike', 'Run']
   end
 
   test '.insterests should be destroyed if contact is destroyed' do
-    interests = @madz.interests
+    interests = @craig.interests
     assert_equal interests.count, 3
 
-    @madz.destroy
+    @craig.destroy
     assert interests.empty?
   end
 end
